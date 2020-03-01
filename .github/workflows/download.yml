@@ -41,7 +41,7 @@ jobs:
           git add .
           git commit -m "Update Datasets" || echo "Nothing to update"
           git status
-      - name: Push changes to jekyll site
+      - name: Push changes to repo
         uses: ad-m/github-push-action@master
         with:
           repository: DataHerb/nuforc-ufo-records
