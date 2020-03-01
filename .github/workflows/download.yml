@@ -20,9 +20,6 @@ jobs:
         run: |
           pwd
           ls
-      - name: Copy Aggregator to flora repo
-        run: |
-          cd dataset
       - uses: actions/setup-python@v1
         with:
           python-version: '3.x'
@@ -34,6 +31,7 @@ jobs:
           pip install pandas
       - name: Download new data
         run: |
+          cd dataset
           python ../scripts/download.py
       - name: Update Data
         run: |
