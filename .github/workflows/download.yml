@@ -27,7 +27,12 @@ jobs:
         with:
           python-version: '3.x'
       - name: Install Python Requirements
-        run: pip install -r requirements.txt
+        run: |
+          pip install requests
+          pip install bs4
+          pip install lxml
+          pip install pandas
+          pip install
       - name: Download new data
         run: |
           python ../scripts/download.py
