@@ -1,0 +1,46 @@
+name: Download from NUFORC
+
+on:
+  push:
+    branches:
+      - master
+  schedule:
+    - cron:  '0 7 * * 1'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout dataherb-flora
+        uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.ACCESS_TOKEN }}
+      - name: Get current directory and files
+        run: |
+          pwd
+          ls
+      - name: Copy Aggregator to flora repo
+        run: |
+          cd dataset
+      - uses: actions/setup-python@v1
+        with:
+          python-version: '3.x'
+      - name: Install Python Requirements
+        run: pip install -r requirements.txt
+      - name: Download new data
+        run: |
+          python ../scripts/download.py
+      - name: Update Data
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git status
+          git add .
+          git commit -m "Update Datasets" || echo "Nothing to update"
+          git status
+      - name: Push changes to jekyll site
+        uses: ad-m/github-push-action@master
+        with:
+          repository: DataHerb/nuforc-ufo-records
+          github_token: ${{ secrets.ACCESS_TOKEN }}
