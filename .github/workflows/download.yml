@@ -32,7 +32,6 @@ jobs:
           pip install bs4
           pip install lxml
           pip install pandas
-          pip install
       - name: Download new data
         run: |
           python ../scripts/download.py
