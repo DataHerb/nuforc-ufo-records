@@ -1,0 +1,30 @@
+name: UFO Events from National UFO Reporting Center
+description: UFO events from National UFO Reporting Center
+contributors:
+- name: 'National UFO Reporting Center'
+  github: ''
+data:
+- name: csv format of ufo events
+  description: ufo event datetime, location, duration, and descriptions
+  path: dataset/nuforc_ufo_records.csv
+  format: csv
+  size: 12M
+  updated_at: ''
+  fields:
+  - name: Date / Time
+    description: 'datetime in US format, with some exceptions'
+  - name: City
+    description: 'city where the event occurred, sometimes with country name included if the city is not in the US'
+  - name: State
+    description: 'US state abbreviations'
+  - name: Shape
+    description: 'shape of the UFO object'
+  - name: Duration
+    description: 'description of the UFO object'
+  - name: Summary
+    description: 'summary of the event'
+  - name: Posted
+    description: 'date of posting'
+references:
+- name: 'National UFO Reporting Center Report Index by Month'
+  link: 'http://www.nuforc.org/webreports/ndxevent.html'
