@@ -1,0 +1,63 @@
+{
+    "source": "git",
+    "name": "nuforc-ufo-records",
+    "id": "git-dataherb-nuforc-ufo-records",
+    "description": "For Fun: National UFO Reporting Center UFO Events",
+    "uri": "https://github.com/DataHerb/nuforc-ufo-records",
+    "metadata_uri": "https://raw.githubusercontent.com/DataHerb/nuforc-ufo-records/main/dataherb.json",
+    "datapackage": {
+        "profile": "tabular-data-package",
+        "resources": [
+            {
+                "path": "dataset/nuforc_ufo_records.csv",
+                "profile": "tabular-data-resource",
+                "name": "nuforc_ufo_records",
+                "format": "csv",
+                "mediatype": "text/csv",
+                "encoding": "utf-8",
+                "schema": {
+                    "fields": [
+                        {
+                            "name": "Date / Time",
+                            "type": "string",
+                            "format": "default"
+                        },
+                        {
+                            "name": "City",
+                            "type": "string",
+                            "format": "default"
+                        },
+                        {
+                            "name": "State",
+                            "type": "string",
+                            "format": "default"
+                        },
+                        {
+                            "name": "Shape",
+                            "type": "string",
+                            "format": "default"
+                        },
+                        {
+                            "name": "Duration",
+                            "type": "string",
+                            "format": "default"
+                        },
+                        {
+                            "name": "Summary",
+                            "type": "string",
+                            "format": "default"
+                        },
+                        {
+                            "name": "Posted",
+                            "type": "string",
+                            "format": "default"
+                        }
+                    ],
+                    "missingValues": [
+                        ""
+                    ]
+                }
+            }
+        ]
+    }
+}
