@@ -13,7 +13,7 @@ jobs:
 
     steps:
       - name: Checkout dataherb-flora
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
         with:
           token: ${{ secrets.ACCESS_TOKEN }}
       - name: Get current directory and files
