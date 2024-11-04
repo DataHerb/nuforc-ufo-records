@@ -27,6 +27,7 @@ jobs:
           pip install bs4
           pip install lxml
           pip install pandas
+          pip install html5lib
       - name: Download new data
         run: |
           cd dataset
