@@ -87,7 +87,7 @@ def extract_table(link):
 
 dfs = []
 for link in page_links:
-    link = f"http://www.nuforc.org/webreports/{link}"
+    link = f"http://www.nuforc.org{link}"
     dfs.append(
         extract_table(link)
     )
