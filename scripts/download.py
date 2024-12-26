@@ -24,7 +24,7 @@ logger = logging.getLogger('ufo_ext')
 # In[2]:
 
 
-base_url = "http://www.nuforc.org/webreports/ndxevent.html"
+base_url = "https://nuforc.org/ndx/?id=event"
 
 
 # In[3]:
